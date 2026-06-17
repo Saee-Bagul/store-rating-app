@@ -1,4 +1,4 @@
-# ⭐ Store Rating App
+#  Store Rating App
 
 A fullstack web application where users can submit ratings (1–5) for stores registered on the platform.
 
@@ -27,7 +27,7 @@ Enter your MySQL username/password:
 const dbConfig = {
   host: 'localhost',
   user: 'root',
-  password: '',   // 👈 enter your MySQL password here
+  password: '',   //  enter your MySQL password here
   database: 'store_rating_db',
 }
 ```
@@ -52,7 +52,7 @@ Tables and the default admin account are created **automatically** on the first 
 
 ---
 
-## 🔑 Default Admin Login
+##  Default Admin Login
 
 | Email | Password |
 |-------|----------|
@@ -60,7 +60,7 @@ Tables and the default admin account are created **automatically** on the first 
 
 ---
 
-## 👤 User Roles
+##  User Roles
 
 | Role | Capabilities |
 |------|---------------|
@@ -70,7 +70,7 @@ Tables and the default admin account are created **automatically** on the first 
 
 ---
 
-## ✅ Form Validations
+##  Form Validations
 
 - **Name:** 20–60 characters
 - **Address:** Max 400 characters
@@ -79,7 +79,7 @@ Tables and the default admin account are created **automatically** on the first 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -101,7 +101,7 @@ src/
 
 ---
 
-## 🐛 Common Issues
+##  Common Issues
 
 **"Access denied for user 'root'"**
 → Enter the correct MySQL password in `src/lib/db.js`
@@ -117,7 +117,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-## ✨ Features
+##  Features
 
 ### System Administrator
 - Dashboard showing total users, total stores, and total ratings
