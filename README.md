@@ -9,7 +9,7 @@ A fullstack web application where users can submit ratings (1–5) for stores re
 
 ---
 
-## 🚀 Setup — Step by Step
+##  Setup — Step by Step
 
 ### Step 1: Prerequisites
 - Install Node.js v18+ → https://nodejs.org
