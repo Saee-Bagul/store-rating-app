@@ -1,6 +1,6 @@
 # ⭐ Store Rating App
 
-Fullstack web app jisme users stores ko 1-5 rating de sakte hain.
+A fullstack web application where users can submit ratings (1–5) for stores registered on the platform.
 
 **Tech Stack:**
 - Backend: Next.js (API Routes) — Plain JavaScript
@@ -12,67 +12,69 @@ Fullstack web app jisme users stores ko 1-5 rating de sakte hain.
 ## 🚀 Setup — Step by Step
 
 ### Step 1: Prerequisites
-- Node.js v18+ install karo → https://nodejs.org
-- MySQL install karo → https://dev.mysql.com/downloads/installer/ (ya XAMPP/WAMP use karo agar already hai)
+- Install Node.js v18+ → https://nodejs.org
+- Install MySQL → https://dev.mysql.com/downloads/installer/ (or use XAMPP/WAMP if you already have it)
 
-### Step 2: MySQL Start Karo
-MySQL server chal raha hona chahiye (XAMPP/WAMP se start karo, ya MySQL service start karo).
+### Step 2: Start MySQL
+Make sure your MySQL server is running (start it via XAMPP/WAMP, or start the MySQL service directly).
 
-### Step 3: Database Config Set Karo
+### Step 3: Configure Database Connection
 
-File kholo: `src/lib/db.js`
+Open the file: `src/lib/db.js`
 
-Apna MySQL username/password daalo:
+Enter your MySQL username/password:
 ```js
 const dbConfig = {
   host: 'localhost',
   user: 'root',
-  password: '',   // 👈 yahan apna MySQL password daalo
+  password: '',   // 👈 enter your MySQL password here
   database: 'store_rating_db',
 }
 ```
 
-> Database (`store_rating_db`) khud ban jaayega — manually banane ki zaroorat nahi.
+> The database (`store_rating_db`) will be created automatically — no need to create it manually.
 
-### Step 4: Dependencies Install Karo
+### Step 4: Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Step 5: App Run Karo
+### Step 5: Run the App
 
 ```bash
 npm run dev
 ```
 
-Browser mein kholo: **http://localhost:3000**
+Open in browser: **http://localhost:3000**
 
-Tables aur default admin **automatically** ban jaayenge first run par.
+Tables and the default admin account are created **automatically** on the first run.
 
 ---
 
 ## 🔑 Default Admin Login
+
 | Email | Password |
 |-------|----------|
 | admin@storerating.com | Admin@123 |
 
 ---
 
-## 👤 Roles
+## 👤 User Roles
 
-| Role | Kya kar sakta hai |
-|------|---------------------|
-| **Admin** | Dashboard stats, users/stores add karna, filter/sort karna |
-| **Normal User** | Signup, stores browse karna, rating dena/modify karna |
-| **Store Owner** | Apna store dashboard dekhna, raters ki list dekhna |
+| Role | Capabilities |
+|------|---------------|
+| **Admin** | View dashboard stats, add users/stores, filter and sort listings |
+| **Normal User** | Sign up, browse stores, submit/modify ratings |
+| **Store Owner** | View their store's dashboard and list of users who rated it |
 
 ---
 
 ## ✅ Form Validations
+
 - **Name:** 20–60 characters
 - **Address:** Max 400 characters
-- **Password:** 8–16 chars, 1 uppercase, 1 special character
+- **Password:** 8–16 characters, at least 1 uppercase letter and 1 special character
 - **Email:** Standard email format
 
 ---
@@ -91,7 +93,7 @@ src/
 │   ├── dashboard/
 │   │   ├── admin/
 │   │   └── store-owner/
-│   ├── stores/     → Normal user store browsing
+│   ├── stores/     → Store browsing for normal users
 │   ├── profile/    → Change password
 │   ├── login/
 │   └── register/
@@ -102,13 +104,39 @@ src/
 ## 🐛 Common Issues
 
 **"Access denied for user 'root'"**
-→ `src/lib/db.js` mein apna correct MySQL password daalo
+→ Enter the correct MySQL password in `src/lib/db.js`
 
 **"connect ECONNREFUSED"**
-→ MySQL server start nahi hai. XAMPP/WAMP open karo aur MySQL start karo.
+→ The MySQL server isn't running. Start it via XAMPP/WAMP or the MySQL service.
 
 **PowerShell "running scripts is disabled"**
-→ PowerShell ko Admin mode mein kholo aur run karo:
+→ Open PowerShell as Administrator and run:
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+
+---
+
+## ✨ Features
+
+### System Administrator
+- Dashboard showing total users, total stores, and total ratings
+- Add new users (admin / normal user / store owner)
+- Add new stores with an optional store owner assignment
+- View and filter users by Name, Email, Address, and Role
+- View and filter stores by Name, Email, and Address
+- Sortable tables (ascending/descending) on key fields
+- View full user details (store owners also show their average rating)
+
+### Normal User
+- Self-registration with form validation
+- Browse all registered stores with search by Name and Address
+- View each store's overall rating and their own submitted rating
+- Submit and modify ratings (1–5 stars)
+- Change password
+
+### Store Owner
+- Dashboard showing store info and average rating
+- List of all users who have rated their store
+- Sortable rater table
+- Change password
