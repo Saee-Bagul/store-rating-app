@@ -31,7 +31,7 @@ export default function RegisterPage() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-logo">
-          <h1>⭐ StoreRate</h1>
+          <h1> StoreRate</h1>
           <p>Create your account</p>
         </div>
         {error && <div className="alert alert-error">{error}</div>}

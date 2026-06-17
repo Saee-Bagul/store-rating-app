@@ -170,7 +170,7 @@ export default function AdminUsers() {
                 {selectedUser.role === 'store_owner' && (
                   <div>
                     <div style={{fontSize:12,color:'var(--text-muted)',fontWeight:700,textTransform:'uppercase',marginBottom:4}}>Store Rating</div>
-                    <div>{selectedUser.store_rating ? `⭐ ${selectedUser.store_rating}` : 'No ratings yet'}</div>
+                    <div>{selectedUser.store_rating ? ` ${selectedUser.store_rating}` : 'No ratings yet'}</div>
                   </div>
                 )}
               </div>

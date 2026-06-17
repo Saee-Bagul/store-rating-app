@@ -43,13 +43,13 @@ export default function StoreOwnerDashboard() {
       <Sidebar />
       <main className="main-content">
         <div className="page-header">
-          <h2>🏪 My Store Dashboard</h2>
+          <h2> My Store Dashboard</h2>
         </div>
         <div className="page-body">
           {loading ? <div className="spinner" /> : !store ? (
             <div className="card">
               <div className="empty-state">
-                <div style={{fontSize:48}}>🏪</div>
+                <div style={{fontSize:48}}></div>
                 <h3 style={{marginBottom:8}}>No store assigned</h3>
                 <p>Contact admin to get a store assigned to your account.</p>
               </div>
@@ -60,8 +60,8 @@ export default function StoreOwnerDashboard() {
                 <div className="card">
                   <div style={{fontSize:13,color:'var(--text-muted)',marginBottom:12,fontWeight:700,textTransform:'uppercase'}}>Store Info</div>
                   <h3 style={{fontSize:20,marginBottom:8}}>{store.name}</h3>
-                  <p style={{color:'var(--text-muted)',fontSize:14,marginBottom:4}}>📧 {store.email}</p>
-                  <p style={{color:'var(--text-muted)',fontSize:14}}>📍 {store.address || '—'}</p>
+                  <p style={{color:'var(--text-muted)',fontSize:14,marginBottom:4}}> {store.email}</p>
+                  <p style={{color:'var(--text-muted)',fontSize:14}}> {store.address || '—'}</p>
                 </div>
                 <div className="card" style={{display:'flex',flexDirection:'column',gap:16}}>
                   <div>
@@ -81,7 +81,7 @@ export default function StoreOwnerDashboard() {
               <div className="section-title">Users Who Rated Your Store</div>
               {raters.length === 0 ? (
                 <div className="empty-state">
-                  <div style={{fontSize:48}}>⭐</div>
+                  <div style={{fontSize:48}}></div>
                   <p>No ratings yet. Share your store to get ratings!</p>
                 </div>
               ) : (

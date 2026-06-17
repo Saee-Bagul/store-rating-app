@@ -88,7 +88,7 @@ export default function StoresPage() {
       <Sidebar />
       <main className="main-content">
         <div className="page-header">
-          <h2>🏪 Browse Stores</h2>
+          <h2> Browse Stores</h2>
           <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{stores.length} stores found</span>
         </div>
         <div className="page-body">
@@ -107,7 +107,7 @@ export default function StoresPage() {
 
           {loading ? <div className="spinner" /> : stores.length === 0 ? (
             <div className="empty-state">
-              <div style={{ fontSize: 48 }}>🏪</div>
+              <div style={{ fontSize: 48 }}></div>
               <p>No stores found matching your search.</p>
             </div>
           ) : (
@@ -115,7 +115,7 @@ export default function StoresPage() {
               {stores.map(store => (
                 <div key={store.id} className="store-card">
                   <div className="store-card-name">{store.name}</div>
-                  <div className="store-card-address">📍 {store.address || 'No address'}</div>
+                  <div className="store-card-address"> {store.address || 'No address'}</div>
                   <div className="store-card-stats">
                     <div className="store-card-avg">{store.avg_rating ?? '—'}</div>
                     {store.avg_rating
@@ -134,7 +134,7 @@ export default function StoresPage() {
                     </div>
                   )}
                   <button className="btn btn-primary btn-sm btn-full" onClick={() => openRating(store)}>
-                    {store.user_rating ? '✏️ Modify Rating' : '⭐ Submit Rating'}
+                    {store.user_rating ? '✏️ Modify Rating' : ' Submit Rating'}
                   </button>
                 </div>
               ))}

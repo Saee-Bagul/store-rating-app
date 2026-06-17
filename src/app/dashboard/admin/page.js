@@ -53,7 +53,7 @@ export default function AdminDashboard() {
                   <div style={{ marginTop: 16 }}><span className="btn btn-secondary btn-sm">View Users →</span></div>
                 </div>
                 <div className="card" style={{ cursor: 'pointer' }} onClick={() => router.push('/dashboard/admin/stores')}>
-                  <h3 style={{ marginBottom: 8 }}>🏪 Manage Stores</h3>
+                  <h3 style={{ marginBottom: 8 }}> Manage Stores</h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: 14 }}>Add, view and filter all registered stores.</p>
                   <div style={{ marginTop: 16 }}><span className="btn btn-secondary btn-sm">View Stores →</span></div>
                 </div>

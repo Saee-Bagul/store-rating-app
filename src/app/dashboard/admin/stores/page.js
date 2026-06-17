@@ -55,7 +55,7 @@ export default function AdminStores() {
       <Sidebar />
       <main className="main-content">
         <div className="page-header">
-          <h2>🏪 Stores Management</h2>
+          <h2> Stores Management</h2>
           <button className="btn btn-primary btn-sm" onClick={() => setShowModal(true)}>+ Add Store</button>
         </div>
         <div className="page-body">
@@ -85,7 +85,7 @@ export default function AdminStores() {
                       <td><strong>{s.name}</strong></td>
                       <td>{s.email}</td>
                       <td>{s.address || '—'}</td>
-                      <td>{s.avg_rating ? `⭐ ${s.avg_rating}` : '—'}</td>
+                      <td>{s.avg_rating ? ` ${s.avg_rating}` : '—'}</td>
                       <td>{s.owner_name || '—'}</td>
                       <td>{s.rating_count || 0}</td>
                     </tr>

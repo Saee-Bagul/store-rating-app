@@ -41,7 +41,7 @@ export default function ProfilePage() {
       <Sidebar />
       <main className="main-content">
         <div className="page-header">
-          <h2>🔒 Change Password</h2>
+          <h2> Change Password</h2>
         </div>
         <div className="page-body">
           <div style={{ maxWidth: 480 }}>
